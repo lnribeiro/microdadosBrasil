@@ -1,42 +1,42 @@
 int_pos;var_name;x;label;length;decimal_places;fin_pos;col_type;CHAR
-1;Ano;$4.;/* Ano de referência */             ;4;0;4;c;TRUE
-5;Trimestre;$1.;/* Trimestre de referência */             ;1;0;5;c;TRUE
-6;UF;$2.;/* Unidade da Federação */             ;2;0;7;c;TRUE
-8;Capital;$2.;/* Município da Capital */             ;2;0;9;c;TRUE
+1;Ano;$4.;/* Ano de refer?ncia */             ;4;0;4;c;TRUE
+5;Trimestre;$1.;/* Trimestre de refer?ncia */             ;1;0;5;c;TRUE
+6;UF;$2.;/* Unidade da Federa??o */             ;2;0;7;c;TRUE
+8;Capital;$2.;/* Munic?pio da Capital */             ;2;0;9;c;TRUE
 10;RM_RIDE;$2.;/* Reg. Metr. e Reg. Adm. Int. Des. */         ;2;0;11;c;TRUE
-12;UPA;$9.;/* Unidade Primária de Amostragem */            ;9;0;20;c;TRUE
+12;UPA;$9.;/* Unidade Prim?ria de Amostragem */            ;9;0;20;c;TRUE
 21;Estrato;$7.;/* Estrato */               ;7;0;27;c;TRUE
-28;V1008;$2.;/* Número de seleção do domicílio */           ;2;0;29;c;TRUE
+28;V1008;$2.;/* N?mero de sele??o do domic?lio */           ;2;0;29;c;TRUE
 30;V1014;$2.;/* Painel */               ;2;0;31;c;TRUE
-32;V1022;$1.;/* Tipo de situação da região */           ;1;0;32;c;TRUE
-33;V1023;$1.;/* Tipo de área */             ;1;0;33;c;TRUE
-34;V1030;9.;/* Projeção da população */             ;9;0;42;i;FALSE
-43;V1031;15.;/* Peso SEM pós estratificação */            ;15;8;57;d;FALSE
-58;V1032;15.;/* Peso COM pós estratificação */            ;15;8;72;d;FALSE
-73;posest;$3.;/* Domínios de projeção */             ;3;0;75;c;TRUE
-76;V2001;2.;/* Número de pessoas no domicílio */           ;2;0;77;i;FALSE
-78;V2003;$2.;/* Número de ordem */             ;2;0;79;c;TRUE
-80;V2005;$2.;/* Condição no domicílio */             ;2;0;81;c;TRUE
+32;V1022;$1.;/* Tipo de situa??o da regi?o */           ;1;0;32;c;TRUE
+33;V1023;$1.;/* Tipo de ?rea */             ;1;0;33;c;TRUE
+34;V1030;9.;/* Proje??o da popula??o */             ;9;0;42;i;FALSE
+43;V1031;15.;/* Peso SEM p?s estratifica??o */            ;15;8;57;d;FALSE
+58;V1032;15.;/* Peso COM p?s estratifica??o */            ;15;8;72;d;FALSE
+73;posest;$3.;/* Dom?nios de proje??o */             ;3;0;75;c;TRUE
+76;V2001;2.;/* N?mero de pessoas no domic?lio */           ;2;0;77;i;FALSE
+78;V2003;$2.;/* N?mero de ordem */             ;2;0;79;c;TRUE
+80;V2005;$2.;/* Condi??o no domic?lio */             ;2;0;81;c;TRUE
 82;V2007;$1.;/* Sexo */               ;1;0;82;c;TRUE
 83;V2008;$2.;/* Dia de nascimento */             ;2;0;84;c;TRUE
-85;V20081;$2.;/* Mês de nascimento */             ;2;0;86;c;TRUE
+85;V20081;$2.;/* M?s de nascimento */             ;2;0;86;c;TRUE
 87;V20082;$4.;/* Ano de nascimento */             ;4;0;90;c;TRUE
-91;V2009;3.;/* Idade na data de referência */           ;3;0;93;i;FALSE
-94;V2010;$1.;/* Cor ou raça */             ;1;0;94;c;TRUE
+91;V2009;3.;/* Idade na data de refer?ncia */           ;3;0;93;i;FALSE
+94;V2010;$1.;/* Cor ou ra?a */             ;1;0;94;c;TRUE
 95;V3001;$1.;/* Sabe ler e escrever */            ;1;0;95;c;TRUE
 96;V3002;$1.;/* Frequenta escola */              ;1;0;96;c;TRUE
-97;V3002A;$1.;/* A escola que ... frequenta é de */         ;1;0;97;c;TRUE
-98;V3003A;$2.;/* Qual é o curso que frequenta */          ;2;0;99;c;TRUE
-100;V3004;$1.;/* Duração deste curso que requenta */           ;1;0;100;c;TRUE
-101;V3005A;$1.;/* Curso que freq é organizado em: */          ;1;0;101;c;TRUE
-102;V3006;$2.;/* Qual é o ano/série que frequenta */          ;2;0;103;c;TRUE
-104;V3007;$1.;/* Concluiu outro curso de graduação */           ;1;0;104;c;TRUE
+97;V3002A;$1.;/* A escola que ... frequenta ? de */         ;1;0;97;c;TRUE
+98;V3003A;$2.;/* Qual ? o curso que frequenta */          ;2;0;99;c;TRUE
+100;V3004;$1.;/* Dura??o deste curso que requenta */           ;1;0;100;c;TRUE
+101;V3005A;$1.;/* Curso que freq ? organizado em: */          ;1;0;101;c;TRUE
+102;V3006;$2.;/* Qual ? o ano/s?rie que frequenta */          ;2;0;103;c;TRUE
+104;V3007;$1.;/* Concluiu outro curso de gradua??o */           ;1;0;104;c;TRUE
 105;V3008;$1.;/* Anteriormente frequentou escola */             ;1;0;105;c;TRUE
 106;V3009A;$2.;/* Curso mais elevado que frequentou */           ;2;0;107;c;TRUE
-108;V3010;$1.;/* Duração do curso que frequentou */           ;1;0;108;c;TRUE
-109;V3011A;$1.;/* Curso que freq é organizado em: */          ;1;0;109;c;TRUE
-110;V3012;$1.;/* Aprovado na prim. série do curso */          ;1;0;110;c;TRUE
-111;V3013;$2.;/* Último ano/série que concluiu */            ;2;0;112;c;TRUE
+108;V3010;$1.;/* Dura??o do curso que frequentou */           ;1;0;108;c;TRUE
+109;V3011A;$1.;/* Curso que freq ? organizado em: */          ;1;0;109;c;TRUE
+110;V3012;$1.;/* Aprovado na prim. s?rie do curso */          ;1;0;110;c;TRUE
+111;V3013;$2.;/* ?ltimo ano/s?rie que concluiu */            ;2;0;112;c;TRUE
 113;V3014;$1.;/* Concluiu o curso que frequentou */           ;1;0;113;c;TRUE
 114;V4001;$1.;/* Trabalhou 1 hr em ativ. remunerd. */          ;1;0;114;c;TRUE
 115;V4002;$1.;/* Trabalhou 1 hr em produtos etc... */          ;1;0;115;c;TRUE
@@ -45,9 +45,15 @@ int_pos;var_name;x;label;length;decimal_places;fin_pos;col_type;CHAR
 118;V4005;$1.;/* Afastado trabalho remunerado */             ;1;0;118;c;TRUE
 119;V4006A;$1.;/* Motivo de estar afastado */            ;1;0;119;c;TRUE
 120;V4008;$1.;/* Quanto tempo que estava afastado */           ;1;0;120;c;TRUE
-121;V40081;$2.;/* Tempo de afastamenento até 1 ano */          ;2;0;122;c;TRUE
+121;V40081;$2.;/* Tempo de afastamenento at? 1 ano */          ;2;0;122;c;TRUE
 123;V40082;$2.;/* Tempo de afastamen. de 1 a 2 anos */        ;2;0;124;c;TRUE
 125;V40083;$2.;/* Tempo de afastamen. mais d 2 anos */         ;2;0;126;c;TRUE
 127;V4009;$1.;/* Quantos trabalhos tinhana semana */            ;1;0;127;c;TRUE
-499;VD3005;$2.;/* Anos de estudo (pessoas de 5 anos ou mais de idade) padronizado para o Ensino fundamental com duração de 9 anos */;2;0;500;c;TRUE
+128;V4010;$4.;/* codigo da ocupacao */;4;0;131;c;TRUE
+132;V4012;$1.;/* nesse trabalho, era*/;1;0;132;c;TRUE
+140;V4014;$1.;/* esse trabalho era na area */;1;0;140;c;TRUE
+177;V403312;8.; /* rendimento bruto */;8;0;184;i;FALSE
+220;V4039;3.;/* quantas horas trabalhava */;3;0;222;i;FALSE
+498;VD3004;$1.;/* nivel de instrucao mais elevado */;1;0;498;c;TRUE
+499;VD3005;$2.;/* Anos de estudo (pessoas de 5 anos ou mais de idade) padronizado para o Ensino fundamental com dura??o de 9 anos */;2;0;500;c;TRUE
 610;VD5005;8.;/* Rendimento (efetivo) domiciliar per capita*/;8;0;617;i;TRUE

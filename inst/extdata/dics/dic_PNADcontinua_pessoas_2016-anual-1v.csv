@@ -231,7 +231,7 @@ int_pos;var_name;x;label;length;decimal_places;fin_pos;col_type;CHAR
 490;VD2002;$2.;/* Condi??o no domic?lio */           ;2;0;491;c;TRUE
 492;VD2003;2.;/* N?mero de componentes do domic. */         ;2;0;493;i;FALSE
 494;VD2004;$1.;/* Esp?cie da unidade dom?stica*/           ;1;0;494;c;TRUE
-495;VD3001;$1.;/* N?vel de instru??o */           ;1;0;495;c;TRUE
+495;VD3004;$1.;/* N?vel de instru??o */           ;1;0;495;c;TRUE
 496;VD3005;$2.;/* Anos de estudo (5 anos ou mais de idade) */     ;2;0;497;c;TRUE
 498;VD3006;$1.;/* Grupamento de anos de estudo (pessoas de 5 anos ou mais de idade) padronizado para o Ensino fundamental com duração de 9 anos*/ ;1;0;498;c;TRUE
 607;VD5005;8.;/* rendimento efetivo domiciliar */;8;0;614;i;FALSE
