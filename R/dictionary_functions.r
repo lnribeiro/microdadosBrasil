@@ -1,17 +1,9 @@
 #' Returns fwf dictionary
 #'
 #' The dictionaries used in this package are stored in lists. get_import_dictionary() is a wrapper to search dictionaries based on dataset name, period and file type.
-
-
 #' @param  dataset name of the dataset, between quotes. If a wrong name is set in this parameter you will see a list of the available datasets.
 #' @param  i period, usually year
 #' @param  ft file type.
-#'
-#' @examples
-#' \dontrun{
-#' get_import_dictionary(dataset = "CensoEscolar", i = 1996, ft = "escola")
-#' }
-
 #' @export
 get_import_dictionary <- function(dataset, i, ft){
   x<- environment()

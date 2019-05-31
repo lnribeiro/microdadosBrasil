@@ -21,11 +21,3 @@ download_sourceData(dataset, i, unzip = T, root_path = NULL,
 \description{
 Download brazilian microdata.
 }
-\examples{
-\dontrun{
-
-download_sourceData("PNAD", 2014, unzip = T, root_path = "F:/Datasets/PNAD", replace = T)
-
-}
-
-}

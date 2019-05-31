@@ -3,7 +3,6 @@
 #' Return a data.frame with metadata about a dataset
 #'
 #' @param dataset name of the dataset. Use get_available_datasets() to see options.
-
 #' @return a data.frame containing metadata about the dataset.
 #'
 #' @export
@@ -46,10 +45,6 @@ aux_read_fwf <- function(f,dic, nrows = -1L, na = "NA"){
   return(d)
 }
 
-
-
-
-
 #' Reads files (fwf or csv).
 #'
 #' Main import function. Parses metadata and import diciontaries (in case of fwf files) to obtain import parameters for the desired subdataset and period. Then imports based on those parameters. Should not be aceessed directly, unless you are trying to extend the package, but rather though the wrapper funtions (read_CENSO, read_PNAD, etc).
@@ -63,17 +58,9 @@ aux_read_fwf <- function(f,dic, nrows = -1L, na = "NA"){
 #' @param vars_subset (optional) read only selected variables( named on the dictionary for fwf files or in the first row for delimited files)
 #' @param nrows (optional) read only n first rows
 #' @param source_file_mark (optional) TRUE/FALSE , if T create a variable with the filename that the observation was imported from, useful for datasets with lots of separated files( CENSO and RAIS)
-#'
-#' @examples
-#' \dontrun{
-#' CSV data:
-#' read_data('escola',2014,CensoEscolar_metadata)
-#' read_data('escola',2014,CensoEscolar_metadata,CensoEscolar_escola_varname_harmonization)
-#'
-#' FWF data: dictionary is mandatory
-#' read_data('escola',2013,CensoEscolar_metadata,CensoEscolar_dics)}
-
 #' @import dplyr
+#' @import magrittr
+#' @import stringr
 #' @importFrom data.table data.table setnames rbindlist :=
 #' @importFrom stats setNames
 #' @export

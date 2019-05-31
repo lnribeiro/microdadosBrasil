@@ -7,14 +7,6 @@
 #' @param unzip  (optional) logical. Should files be unzipped after download?
 #' @param replace (optional) logical. Should an existing version of the data be replaced?
 #' @param root_path (optional) a path to the directory where dataset should be downloaded
-#'
-#' @examples
-#' \dontrun{
-#'
-#' download_sourceData("PNAD", 2014, unzip = T, root_path = "F:/Datasets/PNAD", replace = T)
-#'
-#'}
-#'
 #' @importFrom  utils download.file installed.packages  object.size read.csv2  unzip
 #' @importFrom  RCurl getURL
 #' @export
