@@ -1,6 +1,4 @@
-
 #' Download brazilian microdata.
-#'
 #'
 #' @param dataset Standardized name of brazilian public microdadata. See available datasets with get_available_datasets()
 #' @param i       Period(year/quarter) to download, use get_available_periods(dataset) to see available periods
@@ -139,7 +137,6 @@ download_sourceData <- function(dataset, i, unzip=T , root_path = NULL, replace 
 
 }
 
-
 #' Wrapper for unzipping lots of .rar and .7z files with archive::archive() .
 #'
 #'
@@ -155,11 +152,9 @@ download_sourceData <- function(dataset, i, unzip=T , root_path = NULL, replace 
 #' @export
 unzip_all_7z_rar <- function(root_path){
 
-
   if(!("archive" %in% installed.packages()[,1])){
     stop("The package 'archive' is needed to unzip 7z and rar files. Install it with devtools::install_github('jimhester/archive') \n More info at: https://github.com/jimhester/archive")
   }
-
 
   # #unzipping the data files (in case not unziped above)
   intern_files<- list.files(root_path, recursive = TRUE,all.files = TRUE, full.names = TRUE)

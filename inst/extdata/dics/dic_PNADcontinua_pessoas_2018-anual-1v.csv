@@ -1,37 +1,38 @@
 var_name;int_pos;fin_pos;length;x;label;decimal_places;col_type;CHAR
-Ano;1;4;4;$4.;/* Ano de referência */          ;0;c;TRUE
-Trimestre;5;5;1;$1.;/* Trimestre de referência */          ;0;c;TRUE
-UF;6;7;2;$2.;/* Unidade da Federação */          ;0;c;TRUE
-Capital;8;9;2;$2.;/* Município da Capital */          ;0;c;TRUE
-RM_RIDE;10;11;2;$2.;/* Reg. Metr. e Reg. Adm. Int. Des. */      ;0;c;TRUE
-UPA;12;20;9;$9.;/* Unidade Primária de Amostragem */         ;0;c;TRUE
-Estrato;21;27;7;$7.;/* Estrato */            ;0;c;TRUE
-V1008;28;29;2;$2.;/* Número de seleção do domicílio */        ;0;c;TRUE
-V1014;30;31;2;$2.;/* Painel */            ;0;c;TRUE
-V1022;32;32;1;$1.;/* Tipo de situação da região */        ;0;c;TRUE
-V1023;33;33;1;$1.;/* Tipo de área */          ;0;c;TRUE
-V1030;34;42;9;9.;/* Projeção da população */          ;0;i;FALSE
-V1031;43;57;15;15.;/* Peso SEM pós estratificação */         ;8;d;FALSE
-V1032;58;72;15;15.;/* Peso COM pós estratificação */         ;8;d;FALSE
-posest;73;75;3;$3.;/* Domínios de projeção */          ;0;c;TRUE
-V2001;76;77;2;2.;/* Número de pessoas no domicílio */        ;0;i;FALSE
-V2003;78;79;2;$2.;/* Número de ordem */          ;0;c;TRUE
-V2005;80;81;2;$2.;/* Condição no domicílio */          ;0;c;TRUE
-V2007;82;82;1;$1.;/* Sexo */            ;0;c;TRUE
-V2008;83;84;2;$2.;/* Dia de nascimento */          ;0;c;TRUE
-V20081;85;86;2;$2.;/* Mês de nascimento */          ;0;c;TRUE
-V20082;87;90;4;$4.;/* Ano de nascimento */          ;0;c;TRUE
-V2009;91;93;3;3.;/* Idade na data de referência */        ;0;i;FALSE
-V2010;94;94;1;$1.;/* Cor ou raça */          ;0;c;TRUE
-V3001;95;95;1;$1.;/* sabe ler e escrever */;0;c;TRUE
-V3003A;98;99;2;$2.;/* qual curso frequenta */;0;c;TRUE
-V3009A;106;107;2;$2.;/* qual curso mais elevado frequentou */;0;c;TRUE
-V3014;115;115;1;$1.;/* concluiu este curso que frequentou */;0;c;TRUE
-V4010;130;133;4;$4.;/* codigo da ocupacao */;0;c;TRUE
-V4012;134;134;1;$1.;/* neste trabalho, era*/;0;c;TRUE
-V4014;142;142;1;$1.;/* este trabalho era na area */;0;c;TRUE
-V403312;177;184;8;8.;/* rendimento bruto*/;0;i;FALSE
-V4039;218;220;3;3.;/*quantas horas trabalhou*/;0;i;FALSE
-VD3004;439;439;1;$1.;/* nivel de instrucao mais elevado */;0;c;TRUE
-VD3005;440;441;2;$2.;/* Anos de estudo (pessoas de 5 anos ou mais de idade) padronizado para o Ensino fundamental com duração de 9 anos */;0;c;TRUE
-VD5005;485;492;8;8.;;0;i;FALSE
+Ano;1;4;4;$4.;Ano de referência ;0;c;TRUE
+Trimestre;5;5;1;$1.;Trimestre de referência ;0;c;TRUE
+UF;6;7;2;$2.;Unidade da Federação ;0;c;TRUE
+Capital;8;9;2;$2.;Município da Capital ;0;c;TRUE
+RM_RIDE;10;11;2;$2.;Reg. Metr. e Reg. Adm. Int. Des.      ;0;c;TRUE
+UPA;12;20;9;$9.;Unidade Primária de Amostragem;0;c;TRUE
+Estrato;21;27;7;$7.;Estrato   ;0;c;TRUE
+V1008;28;29;2;$2.;Número de seleção do domicílio;0;c;TRUE
+V1014;30;31;2;$2.;Painel   ;0;c;TRUE
+V1022;32;32;1;$1.;Tipo de situação da região;0;c;TRUE
+V1023;33;33;1;$1.;Tipo de área ;0;c;TRUE
+V1030;34;42;9;9.;Projeção da população ;0;i;FALSE
+V1031;43;57;15;15.;Peso SEM pós estratificação;8;d;FALSE
+V1032;58;72;15;15.;Peso COM pós estratificação;8;d;FALSE
+posest;73;75;3;$3.;Domínios de projeção ;0;c;TRUE
+V2001;76;77;2;2.;Número de pessoas no domicílio;0;i;FALSE
+V2003;78;79;2;$2.;Número de ordem ;0;c;TRUE
+V2005;80;81;2;$2.;Condição no domicílio ;0;c;TRUE
+V2007;82;82;1;$1.;Sexo   ;0;c;TRUE
+V2008;83;84;2;$2.;Dia de nascimento ;0;c;TRUE
+V20081;85;86;2;$2.;Mês de nascimento ;0;c;TRUE
+V20082;87;90;4;$4.;Ano de nascimento ;0;c;TRUE
+V2009;91;93;3;3.;Idade na data de referência;0;i;FALSE
+V2010;94;94;1;$1.;Cor ou raça ;0;c;TRUE
+V3001;95;95;1;$1.;sabe ler e escrever;0;c;TRUE
+V3002;96;96;1;$1.;frequenta escola?;0;c;TRUE
+V3003A;98;99;2;$2.;qual curso frequenta;0;c;TRUE
+V3009A;106;107;2;$2.;qual curso mais elevado frequentou;0;c;TRUE
+V3014;115;115;1;$1.;concluiu este curso que frequentou;0;c;TRUE
+V4010;130;133;4;$4.;codigo da ocupacao;0;c;TRUE
+V4012;134;134;1;$1.;neste trabalho, era;0;c;TRUE
+V4014;142;142;1;$1.;este trabalho era na area;0;c;TRUE
+V403312;177;184;8;8.;rendimento bruto;0;i;FALSE
+V4039;218;220;3;3.;quantas horas trabalhou;0;i;FALSE
+VD3004;439;439;1;$1.;nivel de instrucao mais elevado;0;c;TRUE
+VD3005;440;441;2;$2.;Anos de estudo (pessoas de 5 anos ou mais de idade) padronizado para o Ensino fundamental com duração de 9 anos;0;c;TRUE
+VD5005;485;492;8;8.;Rendimento mensal efetivo de todos os trabalhos para pessoas de 14 anos ou mais de idade;0;i;FALSE

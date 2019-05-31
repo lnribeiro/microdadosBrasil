@@ -41,7 +41,6 @@ aux_read_fwf <- function(f,dic, nrows = -1L, na = "NA"){
 
   lapply(dict, aux_read, f = f, nrows = nrows, na = na) %>% dplyr::bind_cols() -> d
 
-
   return(d)
 }
 
@@ -64,49 +63,52 @@ aux_read_fwf <- function(f,dic, nrows = -1L, na = "NA"){
 #' @importFrom data.table data.table setnames rbindlist :=
 #' @importFrom stats setNames
 #' @export
-read_data <- function(dataset,ft,i, metadata = NULL,var_translator=NULL,root_path=NULL, file=NULL, vars_subset = NULL, nrows = -1L, source_file_mark = F){
+read_data <- function(dataset, ft, i, metadata = NULL,var_translator=NULL,root_path=NULL, file=NULL, vars_subset = NULL, nrows = -1L, source_file_mark = F){
 
   # CRAN check
   if(F){
-  . <- NULL
-  source_file <- NULL
+    . <- NULL
+    source_file <- NULL
   }
-  #Check for inconsistency in parameters
+  # Check for inconsistency in parameters
   # status:
   # 0 - Both root_path and file, error
   # 1 - No root_path ,no file
   # 2 - Only root_path
   # 3 - Only file
   status<-  test_path_arguments(root_path, file)
-  if(status == 0){ stop()}
+  if(status == 0) stop()
 
+  # Check if provided dataset is valid
   if (!(dataset %in% get_available_datasets())) {
-    stop(paste0(dataset, " is not a valid dataset. Available datasets are: ", paste(get_available_datasets(), collapse = ", "))) }
+    stop(paste0(dataset, " is not a valid dataset. Available datasets are: ", paste(get_available_datasets(), collapse = ", ")))
+  }
 
+  # load dataset's metadata
+  if(is.null(metadata)) metadata<- read_metadata(dataset)
 
-  if(is.null(metadata)){metadata<- read_metadata(dataset)}
-
-
+  # Check if provided period is valid
   i_range<- get_available_periods(metadata)
-  if (!(i %in% i_range)) { stop(paste0("period must be in ", paste(i_range, collapse = ", "))) }
+  if (!(i %in% i_range)) stop(paste0("period must be in ", paste(i_range, collapse = ", ")))
 
+  # Check if provided filetype is valid
   ft_list<- get_available_filetypes(metadata, i)
   if (!(ft %in% ft_list ))    { stop(paste0('ft (file type) must be one of these: ',paste(ft_list, collapse=", "),
                                             '. See table of valid file types for each period at "http://www.github.com/lucasmation/microdadosBrasil'))  }
 
-  #names used to subset metadata data.frame
+  # names used to subset metadata data.frame
   ft2      <- paste0("ft_",ft)
   ft_list2 <- paste0("ft_",ft_list)
-
   var_list <- names(metadata)[ !(names(metadata) %in% ft_list2)]
 
-  #subseting metadata and var_translator
+  # subseting metadata and var_translator
   md <- metadata[metadata$period == i,] %>% select_(.dots =c(var_list,ft2))  %>% rename_(.dots=setNames(ft2,ft))
   if (!is.null(var_translator)) {
     vt <- var_translator %>% rename_( old_varname = as.name(paste0('varname',i)))
     vt <- vt[!is.na(vt$old_varname), c("std_varname", "old_varname")]
   }
 
+  # get data_path and data format from metadata
   a <- md %>% select_(.dots = ft) %>% collect %>% .[[ft]]
   file_name <- unlist(strsplit(a, split='&'))[2]
   delim <- unlist(strsplit(a, split='&'))[1]  # for csv files
@@ -117,59 +119,50 @@ read_data <- function(dataset,ft,i, metadata = NULL,var_translator=NULL,root_pat
   data_path <-  paste(c(root_path,md$path,md$data_folder)[!is.na(c(root_path,md$path,md$data_folder))] ,collapse = "/")
   if(data_path == ""){data_path <- getwd()}
 
+  # search for datafiles
   print(file_name)
   print(data_path)
   files <- list.files(path=data_path,recursive = TRUE, full.names = TRUE) %>% grep(pattern = paste0(file_name, "$"), value = T, ignore.case = T)
   print(files)
-
-
   if (!any(file.exists(files)) & status != 3) { stop("Data not found. Check if you have unziped the data" )  }
 
-
-  #Importing
+  # Importing
   if(status == 3){
     files = file
     if (!any(file.exists(file)) & status != 3) { stop("Data not found. Check if you have unziped the data" )  }
   }
-  #print(format)
+  # print(format)
   t0 <- Sys.time()
-  if(format=='fwf'){
+  if(format=='fwf') {
 
     dic <- get_import_dictionary(dataset, i, ft)
     if(!is.null(vars_subset)){
       dic<- dic[dic$var_name %in% vars_subset,]
       if(dim(dic)[1] == 0){
-
         stop("There are no valid variables in the provided subset")
       }
     }
 
+    lapply(files,function(x,...) aux_read_fwf(x, ...) %>% data.table %>% .[, source_file:= x], dic=dic, nrows = nrows, na = missing_symbol) %>% rbindlist  -> d
 
-    lapply(files,function(x,...) aux_read_fwf(x, ...)%>% data.table %>% .[, source_file:= x], dic=dic, nrows = nrows, na = missing_symbol) %>% rbindlist  -> d
-    #It could be removed after pull request https://github.com/tidyverse/readr/pull/632 be accepted
+    # It could be removed after pull request https://github.com/tidyverse/readr/pull/632 be accepted
     if(any(dic$decimal_places) & dataset == "CENSO"){
       sapply(which(as.logical(dic$decimal_places)), function(x){
         if(dic$col_type[x] == "d"){
           var <- dic$var_name[x]
-
           d[, (var):= (d[, var,with = F] /(10**dic$decimal_places[x]))]
         }
       })
     }
-
   }
   if(format=='csv'){
 
-    if(!is.null(vars_subset)){warning("You provided a subset of variables for a dataset that doesn't have a dictionary, make sure to provide valid variable names.", call. = FALSE)
-
-      d <- lapply(files, function(x,...) data.table::fread(x,...) %>% .[, source_file := x], sep = delim, na.strings = c("NA",missing_symbol), select = vars_subset, nrows = nrows) %>% rbindlist(use.names = T)
-
-    }else{
-
-      d <- lapply(files, function(x,...) data.table::fread(x,...) %>% .[, source_file := x], sep = delim, na.strings = c("NA",missing_symbol), nrows = nrows) %>% rbindlist(use.names = T)
-
+    if(!is.null(vars_subset)){
+      warning("You provided a subset of variables for a dataset that doesn't have a dictionary, make sure to provide valid variable names.", call. = FALSE)
+      d <- lapply(files, function(x,...) data.table::fread(x,...) %>% .[, source_file := x], sep = delim, na.strings = c("NA", missing_symbol), select = vars_subset, nrows = nrows) %>% rbindlist(use.names = T)
+    } else {
+      d <- lapply(files, function(x,...) data.table::fread(x,...) %>% .[, source_file := x], sep = delim, na.strings = c("NA", missing_symbol), nrows = nrows) %>% rbindlist(use.names = T)
     }
-
 
   }
 
@@ -180,17 +173,12 @@ read_data <- function(dataset,ft,i, metadata = NULL,var_translator=NULL,root_pat
 
   #adjusting var names
   if (!is.null(var_translator)) {
-
-
     vt <- vt[vt$old_varname %in%  names(d) & vt$old_varname != "" & vt$std_varname != "",]
     setnames(d, vt$old_varname, vt$std_varname)
-
   }
   if(!source_file_mark & "source_file" %in% names(d)){
-
     d[, source_file:= NULL]
   }
-
 
   return(d)
 }
