@@ -1,4 +1,4 @@
-period;format;download_path;download_mode;path;inputs_folder;data_folder;missing_symbols;ft_escola;ft_escola_em_e_emprof;ft_escola_educprof;ft_escola_ind;ft_escola_desporto;ft_escola_em8;ft_escola_em11;ft_escola_es6;ft_ind_reg;ft_turma;ft_docente;ft_matricula
-2016;csv;http://download.inep.gov.br/microdados/micro_censo_escolar_2016.zip;source;micro_censo_escolar_2016/micro_censo_escolar_2016;;DADOS;;|&ESCOLAS.csv;;;;;;;;;|&TURMAS.csv;|&DOCENTES_[[:print:]]*.csv;|&MATRICULA_[[:print:]]*.csv
-2017;csv;http://download.inep.gov.br/microdados/micro_censo_escolar_2017.zip;source;micro_censo_escolar_2017/Microdados_Censo_Escolar_2017;;DADOS;;|&ESCOLAS.csv;;;;;;;;;|&TURMAS.csv;|&DOCENTES_[[:print:]]*.csv;|&MATRICULA_[[:print:]]*.csv
-2018;csv;http://download.inep.gov.br/microdados/microdados_educacao_basica_2018.zip;source;microdados_educacao_basica_2018;;DADOS;;|&ESCOLAS.csv;;;;;;;;;|&TURMAS.csv;|&DOCENTES_[[:print:]]*.csv;|&MATRICULA_[[:print:]]*.csv
+period;format;download_path;download_mode;path;inputs_folder;data_folder;missing_symbols;ft_escola;ft_turma;ft_docente;ft_matricula
+2016;csv;http://download.inep.gov.br/microdados/micro_censo_escolar_2016.zip;source;micro_censo_escolar_2016/micro_censo_escolar_2016;;DADOS;;|&ESCOLAS.csv;|&TURMAS.csv;|&DOCENTES_[[:print:]]*.csv;|&MATRICULA_[[:print:]]*.csv
+2017;csv;http://download.inep.gov.br/microdados/micro_censo_escolar_2017.zip;source;micro_censo_escolar_2017/Microdados_Censo_Escolar_2017;;DADOS;;|&ESCOLAS.csv;|&TURMAS.csv;|&DOCENTES_[[:print:]]*.csv;|&MATRICULA_[[:print:]]*.csv
+2018;csv;http://download.inep.gov.br/microdados/microdados_educacao_basica_2018.zip;source;microdados_educacao_basica_2018;;DADOS;;|&ESCOLAS.csv;|&TURMAS.csv;|&DOCENTES_[[:print:]]*.csv;|&MATRICULA_[[:print:]]*.csv

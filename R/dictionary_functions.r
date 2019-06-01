@@ -6,12 +6,11 @@
 #' @param  ft file type.
 #' @export
 get_import_dictionary <- function(dataset, i, ft){
-  x<- environment()
 
+  x <- environment()
   datasets_list<- get_available_datasets()
-
-
-  if(!dataset %in% datasets_list){stop( paste0("Dataset not available. The available datasets are these: ",paste(datasets_list,collapse = ", ")),call. = FALSE)}
+  if(!dataset %in% datasets_list)
+    stop( paste0("Dataset not available. The available datasets are these: ",paste(datasets_list,collapse = ", ")),call. = FALSE)
 
   periods_list<- get_available_periods(dataset = dataset, fwfonly = TRUE)
 
@@ -33,7 +32,6 @@ get_import_dictionary <- function(dataset, i, ft){
             stringsAsFactors = FALSE)
 
   }else{
-
     stop("There is no available dictionary for this year. You can help to expand the package creating the dictionary, see more information at https://github.com/lucasmation/microdadosBrasil ")
   }
 
@@ -177,7 +175,6 @@ get_period_dics<- function(i, metadata){
 
 }
 
-
 parses_SQL_import_dic <- function(file){
   a<- NULL
   dic_sql   <- readLines(file) %>% sapply(FUN = remove_comments) %>% sapply(str_trim) %>% as.data.frame(stringsAsFactors = FALSE)
@@ -193,15 +190,3 @@ parses_SQL_import_dic <- function(file){
 
   dic %>% return
 }
-
-
-#Creation of Dataset_dics.rda example
-# setwd(path)
-# metadatas<- read_metadata("PNADContinua")
-# get_dics(metadata)
-#
-# Dataset_dics<- mapply(FUN = get_period_dics, metadata$period, MoreArgs = list(metadata = metadata),SIMPLIFY = FALSE)
-# names(Dataset_dics)<- metadata$period
-
-
-

@@ -26,14 +26,6 @@ test_path_arguments<- function(root_path, file){
   return(status)
 }
 
-
-read_fwf2 <- function(file, dic){
-  dict = nodic_overlap(dic)
-  read = mapply(aux_read_fwf, file, dict) %>% dplyr::bind_cols()
-  read = read[, dic$var_name]
-  return(read)
-}
-
 #' Function to search and solve overlaping problems, returning a list of dictionaries.
 #' @param dic The dictionary to be worked on.
 #' @param init_pos The name of the column which contains the initial positions.
@@ -63,6 +55,7 @@ nodic_overlap <- function(dic, init_pos = "int_pos", fin_pos = "fin_pos"){
 
 
 #' Returns available datasets int the package
+#' @importFrom utils tail
 #' @export
 get_available_datasets <- function(){
   datasets_list<- list.files(system.file("extdata", package = "microdadosBrasil"), full.names = TRUE) %>%
@@ -103,7 +96,7 @@ get_available_periods <- function(dataset, fwfonly = FALSE){
 #' @param  dataset name of the dataset. See get_available_datasets() for options.
 #' @param  period  See get_available_periods(dataset) for options
 #' @export
-get_available_filetypes<- function(dataset, period){
+get_available_filetypes <- function(dataset, period){
   md = is.data.frame(dataset)
   if(!md){
     dataset  = read_metadata(dataset)
