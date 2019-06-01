@@ -34,7 +34,7 @@ download_sourceData <- function(dataset, i, unzip=T , root_path = NULL, replace 
                            "$")
 
   if (!replace) {
-    if(any(grepl(pattern = paste0(data_file_names,collapse = "|"), x = list.files(recursive = TRUE, path = ifelse(is.null(root_path), ".", root_path))))) {
+    if(any(grepl(pattern = paste0(data_file_names,collapse = "|"), x = list.files(recursive = TRUE, path = ifelse(is.null(root_path), ".", root_path)), ignore.case = TRUE))) {
       stop(paste0("This data was already downloaded. Check:\n - ",
                   paste(grep(pattern = paste0(data_file_names,collapse = "|"), list.files(recursive = TRUE,path = ifelse(is.null(root_path), ".", root_path), full.names = TRUE), value = T), collapse = "\n - "),
                   ")\n\nIf you want to overwrite the previous files add replace=T to the function call."))
@@ -93,8 +93,8 @@ download_sourceData <- function(dataset, i, unzip=T , root_path = NULL, replace 
     print(filename)
     print(paste("file dir", file_dir))
 
-    download.file(link,destfile = dest.files, mode = "wb")
-    success <- TRUE
+    download_status <- download.file(link, destfile = dest.files, mode = "wb")
+    success <- (download_status == 0)
 
     if (unzip==T & success == T) unzip(paste(c(root_path,filename),collapse = "/") ,exdir = paste(c(root_path,file_dir),collapse = "/"))
   }
