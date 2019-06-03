@@ -1,20 +1,10 @@
-
 #' Download brazilian microdata.
-#'
 #'
 #' @param dataset Standardized name of brazilian public microdadata. See available datasets with get_available_datasets()
 #' @param i       Period(year/quarter) to download, use get_available_periods(dataset) to see available periods
 #' @param unzip  (optional) logical. Should files be unzipped after download?
 #' @param replace (optional) logical. Should an existing version of the data be replaced?
 #' @param root_path (optional) a path to the directory where dataset should be downloaded
-#'
-#' @examples
-#' \dontrun{
-#'
-#' download_sourceData("PNAD", 2014, unzip = T, root_path = "F:/Datasets/PNAD", replace = T)
-#'
-#'}
-#'
 #' @importFrom  utils download.file installed.packages  object.size read.csv2  unzip
 #' @importFrom  RCurl getURL
 #' @export
@@ -44,7 +34,7 @@ download_sourceData <- function(dataset, i, unzip=T , root_path = NULL, replace 
                            "$")
 
   if (!replace) {
-    if(any(grepl(pattern = paste0(data_file_names,collapse = "|"), x = list.files(recursive = TRUE, path = ifelse(is.null(root_path), ".", root_path))))) {
+    if(any(grepl(pattern = paste0(data_file_names,collapse = "|"), x = list.files(recursive = TRUE, path = ifelse(is.null(root_path), ".", root_path)), ignore.case = TRUE))) {
       stop(paste0("This data was already downloaded. Check:\n - ",
                   paste(grep(pattern = paste0(data_file_names,collapse = "|"), list.files(recursive = TRUE,path = ifelse(is.null(root_path), ".", root_path), full.names = TRUE), value = T), collapse = "\n - "),
                   ")\n\nIf you want to overwrite the previous files add replace=T to the function call."))
@@ -103,8 +93,8 @@ download_sourceData <- function(dataset, i, unzip=T , root_path = NULL, replace 
     print(filename)
     print(paste("file dir", file_dir))
 
-    download.file(link,destfile = dest.files, mode = "wb")
-    success <- TRUE
+    download_status <- download.file(link, destfile = dest.files, mode = "wb")
+    success <- (download_status == 0)
 
     if (unzip==T & success == T) unzip(paste(c(root_path,filename),collapse = "/") ,exdir = paste(c(root_path,file_dir),collapse = "/"))
   }
@@ -147,7 +137,6 @@ download_sourceData <- function(dataset, i, unzip=T , root_path = NULL, replace 
 
 }
 
-
 #' Wrapper for unzipping lots of .rar and .7z files with archive::archive() .
 #'
 #'
@@ -163,11 +152,9 @@ download_sourceData <- function(dataset, i, unzip=T , root_path = NULL, replace 
 #' @export
 unzip_all_7z_rar <- function(root_path){
 
-
   if(!("archive" %in% installed.packages()[,1])){
     stop("The package 'archive' is needed to unzip 7z and rar files. Install it with devtools::install_github('jimhester/archive') \n More info at: https://github.com/jimhester/archive")
   }
-
 
   # #unzipping the data files (in case not unziped above)
   intern_files<- list.files(root_path, recursive = TRUE,all.files = TRUE, full.names = TRUE)

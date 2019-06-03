@@ -14,8 +14,3 @@ get_available_filetypes(dataset, period)
 \description{
 Returns available filetypes for a dataset in a given period.
 }
-\examples{
-
-get_available_filetypes("PNAD", 2014)
-
-}
