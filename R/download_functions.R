@@ -49,9 +49,11 @@ download_sourceData <- function(dataset, i, unzip=T , root_path = NULL, replace 
   if(is.na(link)){stop("Can't download dataset, there are no information about the source")}
 
   if(!is.null(root_path)){
-    if(!file.exists(root_path)){
+    # if(!file.exists(root_path)){
+    if(!dir.exists(root_path)){
       stop(paste0("Can't find ",root_path))
-    }}
+    }
+  }
 
   if(md$download_mode == "ftp"){
 
