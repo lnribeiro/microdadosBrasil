@@ -5,7 +5,7 @@ Version: 0.1
 Date: 2019-06-01
 Authors@R: as.person(c(
     "Lucas Mation <lucas.mation@ipea.gov.br> [aut, cre]",
-    "Nicolas Pinto<nicolas.pinto@ipea.gov.br> [ctb]",
+    "Nicolas Pinto <nicolas.pinto@ipea.gov.br> [ctb]",
     "Lucas N. Ribeiro <lucasnogrib@gmail.com> [ctb]"
     ))
 Description: microdadosBrasil is originally a toolset to read public brazilian microdata such as PNAD and Censo Escolar maintained by Lucas Mation. In this fork, I have modified some functions to support my specific needs.
