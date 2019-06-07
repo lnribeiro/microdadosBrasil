@@ -25,14 +25,14 @@ V2009;91;93;3;3.;Idade na data de referência  ;0;i;FALSE
 V2010;94;94;1;$1.;Cor ou raça;0;c;TRUE
 V3001;95;95;1;$1.;Sabe ler e escrever   ;0;c;TRUE
 V3002;96;96;1;$1.;Frequenta escola     ;0;c;TRUE
-V3003A;98;99;2;$2.;Qual é o curso que frequenta ;0;c;TRUE
-V3009A;106;107;2;$2.;Curso mais elevado que frequentou  ;0;c;TRUE
-V3014;113;113;1;$1.;Concluiu o curso que frequentou  ;0;c;TRUE
+V3003;97;98;2;$2.;Qual é o curso que frequenta ;0;c;TRUE
+V3009;105;106;2;$2.;Curso mais elevado que frequentou  ;0;c;TRUE
+V3014;112;112;1;$1.;Concluiu o curso que frequentou  ;0;c;TRUE
 V4010;128;131;4;$4.;Ocupação no trab. principal   ;0;c;TRUE
 V4012;132;132;1;$1.;Posição na ocupação    ;0;c;TRUE
 V4014;140;140;1;$1.;Esse trabalho era na área  ;0;c;TRUE
 V403312;177;184;8;8.;Valor do rend. hab. em dinheiro ;0;i;FALSE
-V4039;220;222;3;3.;Horas habituais no trab. princ.  ;0;i;FALSE
-VD3004;495;495;1;$1.;Nível de instrução;0;c;TRUE
-VD3005;496;497;2;$2.;Anos de estudo (5 anos ou mais de idade);0;c;TRUE
-VD4020;541;548;8;8.;rendimento efetivo domiciliar de todos os trabalhos;0;i;FALSE
+V4039;219;221;3;3.;Horas habituais no trab. princ.  ;0;i;FALSE
+VD3004;364;364;1;$1.;Nível de instrução;0;c;TRUE
+VD3005;365;366;2;$2.;Anos de estudo (5 anos ou mais de idade);0;c;TRUE
+VD4020;410;417;8;8.;rendimento efetivo domiciliar;0;i;FALSE

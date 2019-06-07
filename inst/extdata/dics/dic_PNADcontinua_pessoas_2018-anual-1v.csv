@@ -35,4 +35,4 @@ V403312;177;184;8;8.;rendimento bruto;0;i;FALSE
 V4039;218;220;3;3.;quantas horas trabalhou;0;i;FALSE
 VD3004;439;439;1;$1.;nivel de instrucao mais elevado;0;c;TRUE
 VD3005;440;441;2;$2.;Anos de estudo (pessoas de 5 anos ou mais de idade) padronizado para o Ensino fundamental com duração de 9 anos;0;c;TRUE
-VD5005;485;492;8;8.;Rendimento mensal efetivo de todos os trabalhos para pessoas de 14 anos ou mais de idade;0;i;FALSE
+VD4020;485;492;8;8.;Rendimento mensal efetivo de todos os trabalhos para pessoas de 14 anos ou mais de idade;0;i;FALSE
