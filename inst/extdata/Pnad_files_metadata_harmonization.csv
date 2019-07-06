@@ -1,0 +1,3 @@
+period;format;download_path;download_mode;missing_symbols;path;inputs_folder;data_folder;ft_domicilios;ft_pessoas
+2014;fwf;ftp://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_anual/microdados/2014/;ftp;;2014;Dicionarios_e_input_20170323/Dicionarios e input;Dados_20170323/Dados;input DOM2014.txt&DOM2014.txt;input PES2014.txt&PES2014.txt
+2015;fwf;ftp://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_anual/microdados/2015/;ftp;;2015;Dicionarios_e_input_20170517/Dicionarios e Input;Dados_20170517/Dados;input DOM2015.txt&DOM2015.txt;input PES2015.txt&PES2015.txt
