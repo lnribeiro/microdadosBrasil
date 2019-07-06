@@ -122,10 +122,14 @@ remove_comments<- function(data, keepLabels = F){
 }
 
 
+#' transforms IBGE's SAS inputs into dataframe dic
+#'
+#' @param file SAS input file
+#' @param keepLabels keep variables labels?
 #' @importFrom stringr str_trim
 #' @importFrom stringr str_extract
 #' @export
-parse_SAS_import_dic <- function(file, keepLabels=F){
+parse_SAS_import_dic <- function(file, keepLabels = FALSE){
 
   #trick for NSE to pass CRAN check
   a <- int_pos <- decimal_places <- x <- NULL

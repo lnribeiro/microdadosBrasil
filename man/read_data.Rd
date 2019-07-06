@@ -23,7 +23,7 @@ read_data(dataset, ft, i, metadata = NULL, var_translator = NULL,
 
 \item{file}{(optional) file to read, ignore all metadata in this case}
 
-\item{vars_subset}{(optional) read only selected variables( named on the dictionary for fwf files or in the first row for delimited files)}
+\item{vars_subset}{(optional) read only selected variables (named on the dictionary for fwf files or in the first row for delimited files)}
 
 \item{nrows}{(optional) read only n first rows}
 
