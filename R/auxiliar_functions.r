@@ -112,4 +112,54 @@ get_available_filetypes <- function(dataset, period){
   return(filetypes)
 }
 
+remove_comments<- function(data, keepLabels = F){
+  remove_inline<- ifelse(keepLabels, I,
+                         function(x) { x %>% gsub(pattern = "/\\*.+?\\*/" , replacement = "") %>%
+                             gsub(pattern = ".+?\\*/" , replacement = "") %>%
+                             gsub(pattern = "/\\*.+$" , replacement = "") })
+
+  data %>% gsub(pattern = "^\\s*/\\*.+?\\*/\\s*$" , replacement = "") %>% remove_inline %>% return
+}
+
+
+#' @importFrom stringr str_trim
+#' @importFrom stringr str_extract
+#' @export
+parse_SAS_import_dic <- function(file, keepLabels=F){
+
+  #trick for NSE to pass CRAN check
+  a <- int_pos <- decimal_places <- x <- NULL
+
+  dic_sas   <- readLines(file) %>% remove_comments(keepLabels) %>% stringr::str_trim() %>% as.data.frame(stringsAsFactors = FALSE)
+
+  names(dic_sas) <- 'a'
+  dic_sas<-  dic_sas %>% filter(grepl("^@",a))
+
+  labels<- stringr::str_extract(dic_sas$a, pattern = "/\\*.+?\\*/")
+
+  dic_sas <- dic_sas  %>%
+    tidyr::extract_("a", into=c('int_pos', 'var_name', 'x', 'label'),
+                    "[[:punct:]\\s+](\\d+)\\s+(\\S+)(?:\\s+([[:graph:]$]+)())?")  %>%
+    mutate_(int_pos= ~as.numeric(int_pos),
+            length= ~gregexpr("[[:digit:]]+(?=\\.)",x,perl = TRUE) %>% regmatches(x = x) %>% as.numeric,
+            decimal_places= ~gregexpr("(?<=\\.)[[:digit:]]+",x,perl = TRUE) %>% regmatches(x = x) %>% as.numeric) -> dic
+  dic %>% mutate(
+    decimal_places=ifelse(is.na(decimal_places),0,decimal_places),
+    fin_pos= int_pos+length -1,
+    col_type=ifelse(is.na(x),'c',
+                    ifelse(grepl("\\$",x),'c',
+                           ifelse(length<=9 & decimal_places==0,'i','d'))) ,
+    CHAR=ifelse(grepl("\\$",x),TRUE,FALSE)
+  ) -> dic
+
+  estimated_length<- dic$int_pos %>% diff %>% c(0)
+  dic$length[is.na(dic$length)]<- estimated_length
+  estimated_final<- dic$int_pos + dic$length
+  dic$fin_pos[is.na(dic$fin_pos)]<- estimated_final[is.na(dic$fin_pos)]
+
+  dic<- dic %>% mutate(label = labels)
+
+  dic %>% return
+}
+
 as.object_size <- function(x) structure(x, class = "object_size")

@@ -1,0 +1,261 @@
+"int_pos";"var_name";"x";"label";"length";"decimal_places";"fin_pos";"col_type";"CHAR"
+1;"Ano";"$4.";"/* Ano de referência */";4;0;4;"c";TRUE
+5;"Trimestre";"$1.";"/* Trimestre de referência */";1;0;5;"c";TRUE
+6;"UF";"$2.";"/* Unidade da Federação */";2;0;7;"c";TRUE
+8;"Capital";"$2.";"/* Município da Capital */";2;0;9;"c";TRUE
+10;"RM_RIDE";"$2.";"/* Reg. Metr. e Reg. Adm. Int. Des. */";2;0;11;"c";TRUE
+12;"UPA";"$9.";"/* Unidade Primária de Amostragem */";9;0;20;"c";TRUE
+21;"Estrato";"$7.";"/* Estrato */";7;0;27;"c";TRUE
+28;"V1008";"$2.";"/* Número de seleção do domicílio */";2;0;29;"c";TRUE
+30;"V1014";"$2.";"/* Painel */";2;0;31;"c";TRUE
+32;"V1016";"$1.";"/* Número da entrevista no domicílio */";1;0;32;"c";TRUE
+33;"V1022";"$1.";"/* Tipo de situação da região */";1;0;33;"c";TRUE
+34;"V1023";"$1.";"/* Tipo de área */";1;0;34;"c";TRUE
+35;"V1027";"15.";"/* Peso SEM pós estratificação */";15;0;49;"d";FALSE
+50;"V1028";"15.";"/* Peso COM pós estratificação */";15;0;64;"d";FALSE
+65;"V1029";"9.";"/* Projeção da população */";9;0;73;"i";FALSE
+74;"posest";"$3.";"/* Domínios de projeção */";3;0;76;"c";TRUE
+77;"V2001";"2.";"/* Número de pessoas no domicílio */";2;0;78;"i";FALSE
+79;"V2003";"$2.";"/* Número de ordem */";2;0;80;"c";TRUE
+81;"V2005";"$2.";"/* Condição no domicílio */";2;0;82;"c";TRUE
+83;"V2007";"$1.";"/* Sexo */";1;0;83;"c";TRUE
+84;"V2008";"$2.";"/* Dia de nascimento */";2;0;85;"c";TRUE
+86;"V20081";"$2.";"/* Mês de nascimento */";2;0;87;"c";TRUE
+88;"V20082";"$4.";"/* Ano de nascimento */";4;0;91;"c";TRUE
+92;"V2009";"3.";"/* Idade na data de referência */";3;0;94;"i";FALSE
+95;"V2010";"$1.";"/* Cor ou raça */";1;0;95;"c";TRUE
+96;"V3001";"$1.";"/* Sabe ler e escrever */";1;0;96;"c";TRUE
+97;"V3002";"$1.";"/* Frequenta escola */";1;0;97;"c";TRUE
+98;"V3002A";"$1.";"/* A escola que ... frequenta é de */";1;0;98;"c";TRUE
+99;"V3003";"$2.";"/* Qual é o curso que frequenta */";2;0;100;"c";TRUE
+101;"V3003A";"$2.";"/* Qual é o curso que frequenta */";2;0;102;"c";TRUE
+103;"V3004";"$1.";"/* Duração deste curso que requenta */";1;0;103;"c";TRUE
+104;"V3004A";"$1.";"/* O curso é de graduação tecnológica? */";1;0;104;"c";TRUE
+105;"V3005";"$1.";"/* Curso que frequenta é seriado */";1;0;105;"c";TRUE
+106;"V3005A";"$1.";"/* Curso que freq é organizado em: */";1;0;106;"c";TRUE
+107;"V3006";"$2.";"/* Qual é o ano/série que frequenta */";2;0;108;"c";TRUE
+109;"V3006A";"$1.";"/* Qual é a etapa que frequenta */";1;0;109;"c";TRUE
+110;"V3006B";"$1.";"/* Este curso que ... frequenta é: */";1;0;110;"c";TRUE
+111;"V3006C";"$1.";"/* Qual turno que frequenta */";1;0;111;"c";TRUE
+112;"V3007";"$1.";"/* Concluiu outro curso de graduação */";1;0;112;"c";TRUE
+113;"V3008";"$1.";"/* Anteriormente frequentou escola */";1;0;113;"c";TRUE
+114;"V3009";"$2.";"/* Curso mais elevado que frequentou */";2;0;115;"c";TRUE
+116;"V3009A";"$2.";"/* Curso mais elevado que frequentou */";2;0;117;"c";TRUE
+118;"V3010";"$1.";"/* Duração do curso que frequentou */";1;0;118;"c";TRUE
+119;"V3011";"$1.";"/* Curso quefrequentou era seriado */";1;0;119;"c";TRUE
+120;"V3010A";"$1.";"/* O curso era de graduação tecnológica? */";1;0;120;"c";TRUE
+121;"V3011A";"$1.";"/* Curso que freq é organizado em: */";1;0;121;"c";TRUE
+122;"V3012";"$1.";"/* Aprovado na prim. série do curso */";1;0;122;"c";TRUE
+123;"V3013";"$2.";"/* Último ano/série que concluiu */";2;0;124;"c";TRUE
+125;"V3013A";"$1.";"/* Qual é a etapa que frequentou */";1;0;125;"c";TRUE
+126;"V3013B";"$1.";"/* Cursou os anos iniciais deste curso */";1;0;126;"c";TRUE
+127;"V3014";"$1.";"/* Concluiu o curso que frequentou */";1;0;127;"c";TRUE
+128;"V3017";"$1.";"/* Local deste curso */";1;0;128;"c";TRUE
+129;"V3018";"$1.";"/* Local do EM foi feito */";1;0;129;"c";TRUE
+130;"V3019";"$1.";"/* Fez técnico de nível médio */";1;0;130;"c";TRUE
+131;"V3020";"$1.";"/* Como é feito este curso técnico */";1;0;131;"c";TRUE
+132;"V3021";"$1.";"/* Fez outro técnico de nível médio */";1;0;132;"c";TRUE
+133;"V3022";"$1.";"/* Como foi feito este curso técnico */";1;0;133;"c";TRUE
+134;"V3022A";"$1.";"/* Em que ano iniciou este curso técnico que frequentou anteriormente */";1;0;134;"c";TRUE
+135;"V3023";"$1.";"/* Concluiu o último curso técnico */";1;0;135;"c";TRUE
+136;"V3024";"$1.";"/* Faz pré-vestibular */";1;0;136;"c";TRUE
+137;"V3025";"$1.";"/* Faz curso de extensão ou capacitação de nível superior */";1;0;137;"c";TRUE
+138;"V3026";"$1.";"/* Faz curso de qualificação profissional */";1;0;138;"c";TRUE
+139;"V3026A";"$1.";"/* Este curso qualificação profissional que frequenta é de */";1;0;139;"c";TRUE
+140;"V3028";"$1.";"/* Fez anteriormente curso de extensão ou capacitação de nível superior */";1;0;140;"c";TRUE
+141;"V3029";"$1.";"/* Frequentou algum curso de qualificação profissional */";1;0;141;"c";TRUE
+142;"V3030";"$1.";"/* Qnd iniciou o último curso */";1;0;142;"c";TRUE
+143;"V3030A";"$1.";"/* Este curso qualificação profissional que frequentou anteriormente era de */";1;0;143;"c";TRUE
+144;"V3032";"$1.";"/* Concluiu o último curso */";1;0;144;"c";TRUE
+145;"V3033";"$1.";"/* Pq não frequenta escola/creche */";1;0;145;"c";TRUE
+146;"V3034";"$2.";"/* Pq não foi a escola */";2;0;147;"c";TRUE
+148;"V4001";"$1.";"/* Trabalhou 1 hr em ativ. remunerd. */";1;0;148;"c";TRUE
+149;"V4002";"$1.";"/* Trabalhou 1 hr em produtos etc... */";1;0;149;"c";TRUE
+150;"V4003";"$1.";"/* Fez algum bico pelo menos de 1 hr */";1;0;150;"c";TRUE
+151;"V4004";"$1.";"/* Ajudou sem receber no domic. 1 hr */";1;0;151;"c";TRUE
+152;"V4005";"$1.";"/* Afastado trabalho remunerado */";1;0;152;"c";TRUE
+153;"V4006";"$1.";"/* Motivo de estar afastado */";1;0;153;"c";TRUE
+154;"V4006A";"$1.";"/* Motivo de estar afastado */";1;0;154;"c";TRUE
+155;"V4007";"$1.";"/* Durante afastameno recebia pagam. */";1;0;155;"c";TRUE
+156;"V4008";"$1.";"/* Quanto tempo que estava afastado */";1;0;156;"c";TRUE
+157;"V40081";"$2.";"/* Tempo de afastamenento até 1 ano */";2;0;158;"c";TRUE
+159;"V40082";"$2.";"/* Tempo de afastamen. de 1 a 2 anos */";2;0;160;"c";TRUE
+161;"V40083";"$2.";"/* Tempo de afastamen. mais d 2 anos */";2;0;162;"c";TRUE
+163;"V4009";"$1.";"/* Quantos trabalhos tinhana semana */";1;0;163;"c";TRUE
+164;"V4010";"$4.";"/* Ocupação no trab. principal */";4;0;167;"c";TRUE
+168;"V4012";"$1.";"/* Posição na ocupação */";1;0;168;"c";TRUE
+169;"V40121";"$1.";"/* Tipo trabalhador não remunerado */";1;0;169;"c";TRUE
+170;"V4013";"$5.";"/* Atividade no trab. principal */";5;0;174;"c";TRUE
+175;"V40132";"$1.";"/* Seção da atividade */";1;0;175;"c";TRUE
+176;"V40132A";"$1.";"/* Seção da atividade */";1;0;176;"c";TRUE
+177;"V4014";"$1.";"/* Esse trabalho era na área */";1;0;177;"c";TRUE
+178;"V4015";"$1.";"/* Teve ajuda de pelo menos um trabalhador não remunerado */";1;0;178;"c";TRUE
+179;"V40151";"$1.";"/* Qnts trabalhadores não remunerados */";1;0;179;"c";TRUE
+180;"V401511";"$1.";"/* 1 a 5 trabalhadores não remunerados */";1;0;180;"c";TRUE
+181;"V401512";"$2.";"/* 6 a 10 trabalhadores não remunerados */";2;0;182;"c";TRUE
+183;"V4016";"$1.";"/* Qnts empregados trabalhavam nesse negócio/empresa*/";1;0;183;"c";TRUE
+184;"V40161";"$1.";"/* 1 a 5 empregados */";1;0;184;"c";TRUE
+185;"V40162";"$2.";"/* 6 a 10 empregados */";2;0;186;"c";TRUE
+187;"V40163";"$2.";"/* 11 a 50 empregados */";2;0;188;"c";TRUE
+189;"V4017";"$1.";"/* Tinha pelo menos um sócio que trab. nesse negócio/empresa*/";1;0;189;"c";TRUE
+190;"V40171";"$1.";"/* Quantos sócios */";1;0;190;"c";TRUE
+191;"V401711";"$1.";"/* 1 a 5 sócios */";1;0;191;"c";TRUE
+192;"V4018";"$1.";"/* Qnts pessoas trabalhavam nesse negócio/empresa */";1;0;192;"c";TRUE
+193;"V40181";"$1.";"/* 1 a 5pessoas */";1;0;193;"c";TRUE
+194;"V40182";"$2.";"/* 6 a 10pessoas */";2;0;195;"c";TRUE
+196;"V40183";"$2.";"/* 11 a 50pessoas */";2;0;197;"c";TRUE
+198;"V4019";"$1.";"/* Negócio/empresa registrado no CNPJ*/";1;0;198;"c";TRUE
+199;"V4020";"$1.";"/* Em que tipo de local funcionava esse negócio/empresa*/";1;0;199;"c";TRUE
+200;"V4021";"$1.";"/* Exercia o trabalho em estabelecimento desse negócio/empresa*/";1;0;200;"c";TRUE
+201;"V4022";"$1.";"/* Onde exercia normalmente esse trabalho*/";1;0;201;"c";TRUE
+202;"V4024";"$1.";"/* Serv. domést. em mais de 1 domic. */";1;0;202;"c";TRUE
+203;"V4025";"$1.";"/* Contratado como empreg. temporário*/";1;0;203;"c";TRUE
+204;"V4026";"$1.";"/* Era contratado somente por pessoa responsável pelo negócio */";1;0;204;"c";TRUE
+205;"V4027";"$1.";"/* Era contratado somente por intermediário */";1;0;205;"c";TRUE
+206;"V4028";"$1.";"/* Servidor público estatutário */";1;0;206;"c";TRUE
+207;"V4029";"$1.";"/* Carteira de trabalho assinada */";1;0;207;"c";TRUE
+208;"V4032";"$1.";"/* Contribuinte de instit. d previd. */";1;0;208;"c";TRUE
+209;"V4033";"$1.";"/* Rendimento habitual var. auxil. */";1;0;209;"c";TRUE
+210;"V40331";"$1.";"/* Rendimento habitual em dinheiro */";1;0;210;"c";TRUE
+211;"V403311";"$1.";"/* Faixa do valor do rendimento hab. */";1;0;211;"c";TRUE
+212;"V403312";"8.";"/* Valor do rend. hab. em dinheiro */";8;0;219;"i";FALSE
+220;"V40332";"$1.";"/* Rendimento habitual em produtos */";1;0;220;"c";TRUE
+221;"V403321";"$1.";"/* Faixa do valor do rendimento hab. */";1;0;221;"c";TRUE
+222;"V403322";"8.";"/* Valor do rend. hab. em produtos */";8;0;229;"i";FALSE
+230;"V40333";"$1.";"/* Rendimento habitual em benefícios */";1;0;230;"c";TRUE
+231;"V403331";"$1.";"/* Tipo rend. habitual em benefícios */";1;0;231;"c";TRUE
+232;"V4034";"$1.";"/* Rendimento efetivo var. auxil. */";1;0;232;"c";TRUE
+233;"V40341";"$1.";"/* Rendimento efetivo em dinheiro */";1;0;233;"c";TRUE
+234;"V403411";"$1.";"/* Faixa do valor do rendimento efe. */";1;0;234;"c";TRUE
+235;"V403412";"8.";"/* Valor do rend. efe. em dinheiro */";8;0;242;"i";FALSE
+243;"V40342";"$1.";"/* Rendimento efetivo em produtos */";1;0;243;"c";TRUE
+244;"V403421";"$1.";"/* Faixa do valor do rendimento efe. */";1;0;244;"c";TRUE
+245;"V403422";"8.";"/* Valor do rend. efe. em produtos */";8;0;252;"i";FALSE
+253;"V4039";"3.";"/* Hrs habituais no trab. princ. */";3;0;255;"i";FALSE
+256;"V4039C";"3.";"/* Hrs efetivas no trab. princ. */";3;0;258;"i";FALSE
+259;"V4040";"$1.";"/* Tempo que estava nesse trabalho */";1;0;259;"c";TRUE
+260;"V40401";"2.";"/* De 1 mês a menos de 1 ano */";2;0;261;"i";FALSE
+262;"V40402";"2.";"/* De 1 ano a menos de 2 anos */";2;0;263;"i";FALSE
+264;"V40403";"2.";"/* De 2 anos ou mais tempo */";2;0;265;"i";FALSE
+266;"V4041";"$4.";"/* Ocupação no trab. secundário */";4;0;269;"c";TRUE
+270;"V4043";"$1.";"/* Posição na ocupação */";1;0;270;"c";TRUE
+271;"V40431";"$1.";"/* Tipo trabalhador não remunerado */";1;0;271;"c";TRUE
+272;"V4044";"$5.";"/* Atividade no trab. secundário */";5;0;276;"c";TRUE
+277;"V4045";"$1.";"/* Esse trabalho era na área */";1;0;277;"c";TRUE
+278;"V4046";"$1.";"/* Negócio/empresa registrado no CNPJ*/";1;0;278;"c";TRUE
+279;"V4047";"$1.";"/* Servidor público estatutário */";1;0;279;"c";TRUE
+280;"V4048";"$1.";"/* Carteira de trabalho assinada */";1;0;280;"c";TRUE
+281;"V4049";"$1.";"/* Contribuinte de instit. d previd. */";1;0;281;"c";TRUE
+282;"V4050";"$1.";"/* Rendimento habitual var. auxil. */";1;0;282;"c";TRUE
+283;"V40501";"$1.";"/* Rendimento habitual em dinheiro */";1;0;283;"c";TRUE
+284;"V405011";"$1.";"/* Faixa do valor do rendimento hab. */";1;0;284;"c";TRUE
+285;"V405012";"8.";"/* Valor do rend. hab. em dinheiro */";8;0;292;"i";FALSE
+293;"V40502";"$1.";"/* Rendimento habitual em produtos */";1;0;293;"c";TRUE
+294;"V405021";"$1.";"/* Faixa do valor do rendimento hab. */";1;0;294;"c";TRUE
+295;"V405022";"8.";"/* Valor do rend. hab. em produtos */";8;0;302;"i";FALSE
+303;"V40503";"$1.";"/* Rendimento habitual em benefícios */";1;0;303;"c";TRUE
+304;"V405031";"$1.";"/* Tipo rend. habitual em benefícios */";1;0;304;"c";TRUE
+305;"V4051";"$1.";"/* Rendimento efetivo var. auxil. */";1;0;305;"c";TRUE
+306;"V40511";"$1.";"/* Rendimento efetivo em dinheiro */";1;0;306;"c";TRUE
+307;"V405111";"$1.";"/* Faixa do valor do rendimento efe. */";1;0;307;"c";TRUE
+308;"V405112";"8.";"/* Valor do rend. efe. em dinheiro */";8;0;315;"i";FALSE
+316;"V40512";"$1.";"/* Rendimento efetivo em produtos */";1;0;316;"c";TRUE
+317;"V405121";"$1.";"/* Faixa do valor do rendimento efe. */";1;0;317;"c";TRUE
+318;"V405122";"8.";"/* Valor do rend. efe. em produtos */";8;0;325;"i";FALSE
+326;"V4056";"3.";"/* Hrs habituais no trab. secun. */";3;0;328;"i";FALSE
+329;"V4056C";"3.";"/* Hrs efetivas no trab. secun. */";3;0;331;"i";FALSE
+332;"V4057";"$1.";"/* Contribuinte de instit. d previd. */";1;0;332;"c";TRUE
+333;"V4058";"$1.";"/* Rendimento habitual var. auxil. */";1;0;333;"c";TRUE
+334;"V40581";"$1.";"/* Rendimento habitual em dinheiro */";1;0;334;"c";TRUE
+335;"V405811";"$1.";"/* Faixa do valor do rendimento hab. */";1;0;335;"c";TRUE
+336;"V405812";"8.";"/* Valor do rend. hab. em dinheiro */";8;0;343;"i";FALSE
+344;"V40582";"$1.";"/* Rendimento habitual em produtos */";1;0;344;"c";TRUE
+345;"V405821";"$1.";"/* Faixa do valor do rendimento hab. */";1;0;345;"c";TRUE
+346;"V405822";"8.";"/* Valor do rend. hab. em produtos */";8;0;353;"i";FALSE
+354;"V40583";"$1.";"/* Rendimento habitual em benefícios */";1;0;354;"c";TRUE
+355;"V405831";"$1.";"/* Tipo rend. habitual em benefícios */";1;0;355;"c";TRUE
+356;"V40584";"$1.";"/* Não remunerado */";1;0;356;"c";TRUE
+357;"V4059";"$1.";"/* Rendimento efetivo var. auxil. */";1;0;357;"c";TRUE
+358;"V40591";"$1.";"/* Rendimento efetivo em dinheiro */";1;0;358;"c";TRUE
+359;"V405911";"$1.";"/* Faixa do valor do rendimento efe. */";1;0;359;"c";TRUE
+360;"V405912";"8.";"/* Valor do rend. efe. em dinheiro */";8;0;367;"i";FALSE
+368;"V40592";"$1.";"/* Rendimento efetivo em produtos */";1;0;368;"c";TRUE
+369;"V405921";"$1.";"/* Faixa do valor do rendimento efe. */";1;0;369;"c";TRUE
+370;"V405922";"8.";"/* Valor do rend. efe. em produtos */";8;0;377;"i";FALSE
+378;"V4062";"3.";"/* Hrs habituais no(s) outro(s) trab.*/";3;0;380;"i";FALSE
+381;"V4062C";"3.";"/* Hrs efetivas no(s) outro(s) trab .*/";3;0;383;"i";FALSE
+384;"V4063";"$1.";"/* Gostaria trabalhar + hrs efetivas */";1;0;384;"c";TRUE
+385;"V4063A";"$1.";"/* Gostaria trabalhar + hrs habituais*/";1;0;385;"c";TRUE
+386;"V4064";"$1.";"/* Dispon. trabalhar + hrs efetivas */";1;0;386;"c";TRUE
+387;"V4064A";"$1.";"/* Dispon. trabalhar + hrs habituais */";1;0;387;"c";TRUE
+388;"V4071";"$1.";"/* Providência p/ conseg. trab.(30d) */";1;0;388;"c";TRUE
+389;"V4072";"$2.";"/* Principal provid. p/conseg. trab. */";2;0;390;"c";TRUE
+391;"V4072A";"$1.";"/* Principal provid. p/conseg. trab. */";1;0;391;"c";TRUE
+392;"V4073";"$1.";"/* Gostaria de ter trabalhado */";1;0;392;"c";TRUE
+393;"V4074";"$1.";"/* Motivo de não ter tomado provid. */";1;0;393;"c";TRUE
+394;"V4074A";"$2.";"/* Motivo de não ter tomado provid. */";2;0;395;"c";TRUE
+396;"V4075A";"$1.";"/* Tempo em que irá começar o trab. */";1;0;396;"c";TRUE
+397;"V4075A1";"$2.";"/* Meses em que irá começar o trab. */";2;0;398;"c";TRUE
+399;"V4076";"$1.";"/* Tempo tentando conseguir trabalho */";1;0;399;"c";TRUE
+400;"V40761";"2.";"/* Tempo tentando trab. 1 mes-1 ano */";2;0;401;"i";FALSE
+402;"V40762";"2.";"/* Tempo tentando trab. 1 ano-2 anos */";2;0;403;"i";FALSE
+404;"V40763";"2.";"/* Tempo tentando trab. + de 2 anos */";2;0;405;"i";FALSE
+406;"V4077";"$1.";"/* Poderia ter começado a trabalhar */";1;0;406;"c";TRUE
+407;"V4078";"$1.";"/* Motivo p/ñ querer/começar a trab. */";1;0;407;"c";TRUE
+408;"V4078A";"$1.";"/* Motivo p /ñ querer/começar a trab. */";1;0;408;"c";TRUE
+409;"V4082";"$1.";"/* Trab por pelo menos 1 hora em 1 ano*/";1;0;409;"c";TRUE
+410;"VI5001A";"$1.";"/* Recebeu BPC-LOAS */";1;0;410;"c";TRUE
+411;"VI5001A2";"8.";"/* Rend recebido de BPC-LOAS */";8;0;418;"i";FALSE
+419;"VI5002A";"$1.";"/* Recebeu bolsa família */";1;0;419;"c";TRUE
+420;"VI5002A2";"8.";"/* Rend recebido de bolsa familia */";8;0;427;"i";FALSE
+428;"VI5003A";"$1.";"/* Recebeu outro prog social */";1;0;428;"c";TRUE
+429;"VI5003A2";"8.";"/* Rend recebido de outro prog social */";8;0;436;"i";FALSE
+437;"VI5004A";"$1.";"/* Recebeu aposentadoria e pensão */";1;0;437;"c";TRUE
+438;"VI5004A2";"8.";"/* Rend recebido de aposentadoria e pensão */";8;0;445;"i";FALSE
+446;"VI5006A";"$1.";"/* Recebeu pensão alimentícia, doação, etc */";1;0;446;"c";TRUE
+447;"VI5006A2";"8.";"/* Rend recebido por pensão alimentícia, doação, etc */";8;0;454;"i";FALSE
+455;"VI5007A";"$1.";"/* Recebeu aluguel e arrendamento */";1;0;455;"c";TRUE
+456;"VI5007A2";"8.";"/* Rend recebido aluguel e arrendamento */";8;0;463;"i";FALSE
+464;"VD2002";"$2.";"/* Condição no domicílio */";2;0;465;"c";TRUE
+466;"VD2003";"2.";"/* Número de componentes do domic. */";2;0;467;"i";FALSE
+468;"VD2004";"$1.";"/* Espécie da unidade doméstica*/";1;0;468;"c";TRUE
+469;"VD3004";"$1.";"/* Nível de instrução mais elevado alcançado (5 anos ou mais de idade) */";1;0;469;"c";TRUE
+470;"VD3005";"$2.";"/* Anos de estudo (5 anos ou mais de idade) para fundamental de 9 anos */";2;0;471;"c";TRUE
+472;"VD3006";"$1.";"/* Grupamento de anos de estudo (pessoas de 5 anos ou mais de idade) para fundamental de 9 anos */";1;0;472;"c";TRUE
+473;"VD4001";"$1.";"/* Condição em relação força d trab. */";1;0;473;"c";TRUE
+474;"VD4002";"$1.";"/* Condição de ocupação */";1;0;474;"c";TRUE
+475;"VD4003";"$1.";"/* Força de trabalho potencial */";1;0;475;"c";TRUE
+476;"VD4004A";"$1.";"/* Subocupação por insuficiên. de hrs hab*/";1;0;476;"c";TRUE
+477;"VD4005";"$1.";"/* Pessoas desalentadas */";1;0;477;"c";TRUE
+478;"VD4007";"$1.";"/* Posição na ocupação trab. princ. */";1;0;478;"c";TRUE
+479;"VD4008";"$1.";"/* Posição na ocupação trab. princ. */";1;0;479;"c";TRUE
+480;"VD4009";"$2.";"/* Posição na ocupação trab. princ. */";2;0;481;"c";TRUE
+482;"VD4010";"$2.";"/* Grupamen. d ativid. trab. princ. */";2;0;483;"c";TRUE
+484;"VD4011";"$2.";"/* Grupamen. ocupacion. trab. Princ. */";2;0;485;"c";TRUE
+486;"VD4012";"$1.";"/* Contrib. instit. previd. qq trab. */";1;0;486;"c";TRUE
+487;"VD4013";"$1.";"/* Faixa hrs habituais em todos trab. */";1;0;487;"c";TRUE
+488;"VD4014";"$1.";"/* Faixa hrs efetivas em todos trab. */";1;0;488;"c";TRUE
+489;"VD4015";"$1.";"/* Tipo d remuneração trab. princ. */";1;0;489;"c";TRUE
+490;"VD4016";"8.";"/* Rendim. habitual trab. princ. */";8;0;497;"i";FALSE
+498;"VD4017";"8.";"/* Rendim. efetivo trab. princ. */";8;0;505;"i";FALSE
+506;"VD4018";"$1.";"/* Tipo d remuneração em qq trabalho */";1;0;506;"c";TRUE
+507;"VD4019";"8.";"/* Rendim. habitual qq trabalho */";8;0;514;"i";FALSE
+515;"VD4020";"8.";"/* Rendim. efetivo qq trabalho */";8;0;522;"i";FALSE
+523;"VDI4022";"8.";"/* Rendim. Efetivo tds fontes */";8;0;530;"i";FALSE
+531;"VD4023";"$1.";"/* Pq ñ proc./ñ gost./ñ disp.p/trab. */";1;0;531;"c";TRUE
+532;"VD4030";"$1.";"/* Pq ñ proc./ñ gost./ñ disp.p/trab. */";1;0;532;"c";TRUE
+533;"VD4031";"3.";"/* Hrs habituais em todos trab. */";3;0;535;"i";FALSE
+536;"VD4032";"3.";"/* Hrs efetivas no trab. princ. */";3;0;538;"i";FALSE
+539;"VD4033";"3.";"/* Hrs efetivas no trab. secun. */";3;0;541;"i";FALSE
+542;"VD4034";"3.";"/* Hrs efetivas no(s) outro(s) trab .*/";3;0;544;"i";FALSE
+545;"VD4035";"3.";"/* Hrs efetivas em todos trab. */";3;0;547;"i";FALSE
+548;"VD4036";"$1.";"/* Faixa hrs habituais trab. princ. */";1;0;548;"c";TRUE
+549;"VD4037";"$1.";"/* Faixa hrs efetivas trab. princ. */";1;0;549;"c";TRUE
+550;"VDI4047";"8.";"/* Rend efetivo de progr sociais, seguro-desemprego, etc */";8;0;557;"i";FALSE
+558;"VDI4048";"8.";"/* Rend efetivo recebido de outras fontes */";8;0;565;"i";FALSE
+566;"VDI5001";"8.";"/* Rend efetivo domiciliar */";8;0;573;"i";FALSE
+574;"VDI5002";"8.";"/* Rend efetivo domiciliar per capita */";8;0;581;"i";FALSE
+582;"VDI5003";"$1.";"/* Faixa de rend efetivo domiciliar per capita */";1;0;582;"c";TRUE
+583;"VDI5004";"8.";"/* Rend efetivo domiciliar */";8;0;590;"i";FALSE
+591;"VDI5005";"8.";"/* Rend efetivo domiciliar per capita */";8;0;598;"i";FALSE
+599;"VDI5006";"$1.";"/* Faixa de rend efetivo domiciliar per capita */";1;0;599;"c";TRUE
