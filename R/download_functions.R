@@ -2,13 +2,13 @@
 #'
 #' @param dataset Standardized name of brazilian public microdadata. See available datasets with get_available_datasets()
 #' @param i       Period(year/quarter) to download, use get_available_periods(dataset) to see available periods
-#' @param unzip  (optional) logical. Should files be unzipped after download?
+#' @param unzip_flag  (optional) logical. Should files be unzipped after download?
 #' @param replace (optional) logical. Should an existing version of the data be replaced?
 #' @param root_path (optional) a path to the directory where dataset should be downloaded
 #' @importFrom  utils download.file installed.packages  object.size read.csv2  unzip
 #' @importFrom  RCurl getURL
 #' @export
-download_sourceData <- function(dataset, i, unzip=T , root_path = NULL, replace = FALSE){
+download_sourceData <- function(dataset, i, unzip_flag=T , root_path = NULL, replace = FALSE){
 
   success = FALSE
   size = NA
@@ -94,15 +94,26 @@ download_sourceData <- function(dataset, i, unzip=T , root_path = NULL, replace 
     print(link)
     print(filename)
     print(paste("file dir", file_dir))
+    print(paste("full unzip path", paste(c(root_path,filename),collapse = "/")))
+    print(paste("full exdir path", exdir = paste(c(root_path,file_dir),collapse = "/")))
+    print(paste("Baixando", link))
 
     download_status <- download.file(link, destfile = dest.files, mode = "wb")
     success <- (download_status == 0)
+    # success <- T
 
-    if (unzip==T & success == T) unzip(paste(c(root_path,filename),collapse = "/") ,exdir = paste(c(root_path,file_dir),collapse = "/"))
+    if (unzip_flag==T & success == T) {
+      print(paste("Descompactando", filename))
+      tryCatch({
+        unzip(paste(c(root_path,filename),collapse = "/") ,exdir = paste(c(root_path,file_dir),collapse = "/"))
+      }, error = function(e) {
+        error("Erro ao descompactar o arquivo. Verifique se ha espaco disponivel no disco.")
+      })
+    }
   }
 
 
-  if (unzip==T & success == T){
+  if (unzip_flag==T & success == T){
 
     ##unzipping the data files (in case not unziped above)
     intern_files<- list.files(paste(c(root_path,file_dir),collapse = "/"), recursive = TRUE,all.files = TRUE, full.names = TRUE)
@@ -112,7 +123,13 @@ download_sourceData <- function(dataset, i, unzip=T , root_path = NULL, replace 
 
     for(zip_file in zip_files){
       exdir<- zip_file %>% gsub(pattern = "\\.zip", replacement = "")
-      unzip(zipfile = zip_file,exdir = exdir )
+      print(paste("Descompactando", zip_file))
+      tryCatch({
+        unzip(zipfile = zip_file,exdir = exdir )
+      }, error = function(e) {
+        error("Erro ao descompactar os sub-arquivos. Verifique se ha espaco disponivel no disco.")
+      })
+
     }
 
     # check if package "archive" is installed before trying to extract the .rar files.
@@ -126,7 +143,6 @@ download_sourceData <- function(dataset, i, unzip=T , root_path = NULL, replace 
   }
 
   if(all(file.info(paste(c(root_path,filename),collapse = "/"))$isdir)){
-
     size<- as.object_size(sum(file.info(list.files(paste(c(root_path,filename), collapse = "/"), recursive = TRUE, full.names = T))$size)) %>%
       format(units = "Mb")
   }else{
